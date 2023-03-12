@@ -12,8 +12,9 @@ const DashboardNav = (props) => {
       <div style={{ zoom: '0.8' }}>
         <Link href='/app'>
           <a>
-            <h1>JotMe Logo</h1>
-            <h1>Goes Here</h1>
+            <div style={{ zoom: 0.45 }}>
+              <Image src= {Logo} alt='JotMe' priority placeholder='blur' />
+            </div>
           </a>
         </Link>
       </div>

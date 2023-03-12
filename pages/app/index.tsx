@@ -19,7 +19,7 @@ const indexPage: React.FC<{ user: UserProfile }> = ({ user }) => {
   return (
     <DashboardLayout>
       <Head>
-        <title>{user.name}&apos;s Dashboard | JotMe</title>
+        <title>{user.name}&apos;s Dashboard | JotMe </title>
       </Head>
       <div>
         <div className='flex flex-wrap items-center justify-around w-full px-5 py-3 mt-1 mb-5'>
@@ -99,31 +99,7 @@ const indexPage: React.FC<{ user: UserProfile }> = ({ user }) => {
             {/* <div className='max-w-xl px-4 py-2 mx-auto rounded shadow'></div> */}
           </div>
           
-          <div className='w-full max-w-sm px-4 py-2 mx-auto'>
-            <h3 className='my-3 text-lg font-medium'>Your Playgrounds</h3>
-            {data?.playgrounds?.map((playground) => (
-              <Link
-                key={playground?.id}
-                href={'/app/playgrounds/' + playground?.id}>
-                <a className='block'>
-                  <div className='w-full px-2 py-1 my-3 rounded bg-gray-50 hover:bg-gray-100'>
-                    <p className='capitalize'>
-                      {truncate(playground?.playgroundName, { length: 50 })}
-                    </p>
-                  </div>
-                </a>
-              </Link>
-            )) || <Skeleton count={4} className='w-full px-2 py-1 my-1' />}
-            {data?.playgrounds?.length == 0 && (
-              <div className='w-full px-2 py-1 my-3'>
-                <p>
-                  Hey {user.name}, you haven&apos;t created any HTML, CSS, JS
-                  Playgrounds yet!!
-                </p>
-                <p>{'¯\\_(ツ)_/¯'}</p>
-              </div>
-            )}
-          </div>
+          
         </div>
       </div>
     </DashboardLayout>
@@ -139,14 +115,18 @@ const links = [
   },
   {
     path: '/app/sticky-notes',
-    title: 'Sticky notes',
+    title: 'Sticky Notes',
   },
   {
     path: '/app/pomorodo',
-    title: 'Pomorodo',
+    title: 'Pomodoro',
   },
   {
     path: '/app/playgrounds',
     title: 'Web Playground',
+  },
+  {
+    path: '/app/todo',
+    title: 'Todo-Lists',
   },
 ];

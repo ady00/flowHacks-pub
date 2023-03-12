@@ -27,6 +27,7 @@ import SplitterLayout from "react-splitter-layout";
 import "react-splitter-layout/lib/index.css";
 // @ts-ignore
 import htmltojsx from "html-2-jsx";
+//import Logo from '@/public/logos/logo-transparent.png'; 
 
 const index: React.FC<{ user: UserProfile }> = ({ user }) => {
   const { data: playgrounds } = useSWR<CodePlayground[]>(
@@ -132,14 +133,15 @@ table thead td {
             onValueChange={(tab) => setTab(tab)}>
             <Tabs.List>
               <div className="flex flex-wrap items-center justify-around nav">
-                <div style={{ zoom: '0.8' }}>
-                  <Link href='/app'>
-                  <a>
-                    <h1>JotMe Logo</h1>
-                    <h1>Goes Here</h1>
-                  </a>
-                  </Link>
-                </div>
+              <div style={{ zoom: '0.8' }}>
+                <Link href='/app'>
+                <a>
+                  <div style={{ zoom: 1.2 }}>
+                    <h1><b>Home</b></h1>
+                  </div>
+                </a>
+                </Link>
+      </div>
                 <Tabs.Trigger
                   className={`px-5 border py-1 hover:bg-gray-100 border-gray-300 rounded my-2 cursor-pointer ${
                     tab === "html" &&

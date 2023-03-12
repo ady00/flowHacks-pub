@@ -92,25 +92,8 @@ const Page: React.FC<{ user: UserProfile }> = ({ user }) => {
                 </div>
               ))}
             </div>
-            <h2 className='z-30 inline-block text-lg font-extrabold md:text-3xl md:mt-16'>
-              Points earned: {points}
-            </h2>
             <div className='inline-block'>
-              <Popover.Root>
-                <Popover.Trigger className='relative block ml-3 top-1'>
-                  <FiInfo className='w-6 h-6 p-1 text-gray-500 rounded hover:bg-gray-100' />
-                </Popover.Trigger>
-                <Popover.Anchor />
-                <Popover.Content className='flex items-center justify-center py-3 -mb-3 bg-gray-900 rounded shadow-lg px-7 text-gray-50'>
-                  <ul className='block list-disc'>
-                    <li>5 points - a very important task</li>
-                    <li>3 points - an important task</li>
-                    <li>1 point - a &quot;not so important&quot; task</li>
-                  </ul>
-                  <Popover.Close />
-                  <Popover.Arrow />
-                </Popover.Content>
-              </Popover.Root>
+              
             </div>
             <p>
               {todolist?.todos?.filter((todo) => todo?.isDone === false)
